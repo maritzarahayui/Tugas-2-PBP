@@ -9,20 +9,14 @@ https://tugas-2-katalog.herokuapp.com/katalog
 
 ## Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html
 
-Bagan:
 <img width="1318" alt="Tugas 2 PBP" src="https://user-images.githubusercontent.com/112602492/190104807-f2745d30-9024-4a10-a272-cb6298a7ccbe.png">
 
-Penjelasan:
 Web aplikasi menunggu HTTP request dari web browser yang berisi request client. Ketika request diterima, web aplikasi mengerjakan apa yang dibutuhkan berdasarkan URL. Tergantung apa yang diperlukan, views.py dapat membaca atau menulis informasi dari database yang diperoleh dari models atau melakukan tugas lain yang diperlukan untuk memenuhi request client. Kemudian, web aplikasi akan mengembalikan respons ke web browser dengan membuat halaman HTML yang akan ditampilkan oleh browser dengan memasukkan data yang diambil dari template HTML.
 
-1. URLs
-   URL digunakan untuk mengarahkan HTTP request ke tampilan yang sesuai. 
-2. View
-   View adalah request handler function yang menerima HTTP requests dan mengembalikan HTTP responses. View mengakses data yang diperlukan untuk memenuhi permintaan melalui models dan mendelegasikan respons ke templates.
-3. Models
-   Models adalah Python objects yang mendefinisikan struktur data aplikasi dan menyediakan mekanisme untuk mengelola, seperti menambah, memodifikasi, menghapus, dan meminta catatan ke dalam database.
-4. Templates
-   Templates adalah file teks yang mendefinisikan struktur atau tata letak file, seperti halaman HTML, dengan placeholder yang digunakan untuk mewakili konten yang sebenarnya. View dapat membuat halaman HTML menggunakan template HTML dan mengisinya dengan data-data dari models.
+1. URLs: URL digunakan untuk mengarahkan HTTP request ke tampilan yang sesuai. 
+2. View: View adalah request handler function yang menerima HTTP requests dan mengembalikan HTTP responses. View mengakses data yang diperlukan untuk memenuhi permintaan melalui models dan mendelegasikan respons ke templates.
+3. Models: Models adalah Python objects yang mendefinisikan struktur data aplikasi dan menyediakan mekanisme untuk mengelola, seperti menambah, memodifikasi, menghapus, dan meminta catatan ke dalam database.
+4. Templates: Templates adalah file teks yang mendefinisikan struktur atau tata letak file, seperti halaman HTML, dengan placeholder yang digunakan untuk mewakili konten yang sebenarnya. View dapat membuat halaman HTML menggunakan template HTML dan mengisinya dengan data-data dari models.
 
 ### Sending the request to the right view (urls.py)
 URL mapper disimpan dalam file bernama urls.py. URL mapper (variabel urlpatterns) mendefinisikan daftar pemetaan antara rute (specific URL patterns) dengan fungsi tampilan yang sesuai. Jika HTTP request yang diterima memiliki URL yang cocok, fungsi tampilan yang berkaitan akan dipanggil dan meneruskan permintaan tersebut.
@@ -334,7 +328,7 @@ Setelah melakukan tahapan-tahapan sebelumnya, jika kita membuka tab GitHub Actio
 
 6. Membuka tab GitHub Actions dan menjalankan kembali workflow yang gagal (Click commit names -> Re-run jobs -> Re-run failed jobs). 
 
-Setelah workflow berjalan kembali, status deployment menjadi sukses (terdapat simbol centang hijau pada repositori). Aplikasi dapat diakses melalui https://<nama-aplikasi-heroku>.herokuapp.com/katalog
+Setelah workflow berjalan kembali, status deployment menjadi sukses (terdapat simbol centang hijau pada repositori). Aplikasi dapat diakses melalui https://tugas-2-katalog.herokuapp.com/katalog
   
 ## Referensi
 

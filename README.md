@@ -9,6 +9,7 @@ https://tugas-2-katalog.herokuapp.com/katalog
 
 ## Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html
 
+<<<<<<< HEAD
 Bagan:
 
 Penjelasan:
@@ -22,6 +23,16 @@ Web aplikasi menunggu HTTP request dari web browser yang berisi request client. 
    Models adalah Python objects yang mendefinisikan struktur data aplikasi dan menyediakan mekanisme untuk mengelola, seperti menambah, memodifikasi, menghapus, dan meminta catatan ke dalam database.
 4. Templates
    Templates adalah file teks yang mendefinisikan struktur atau tata letak file, seperti halaman HTML, dengan placeholder yang digunakan untuk mewakili konten yang sebenarnya. View dapat membuat halaman HTML menggunakan template HTML dan mengisinya dengan data-data dari models.
+=======
+<img width="1318" alt="Tugas 2 PBP" src="https://user-images.githubusercontent.com/112602492/190104807-f2745d30-9024-4a10-a272-cb6298a7ccbe.png">
+
+Web aplikasi menunggu HTTP request dari web browser yang berisi request client. Ketika request diterima, web aplikasi mengerjakan apa yang dibutuhkan berdasarkan URL. Tergantung apa yang diperlukan, views.py dapat membaca atau menulis informasi dari database yang diperoleh dari models atau melakukan tugas lain yang diperlukan untuk memenuhi request client. Kemudian, web aplikasi akan mengembalikan respons ke web browser dengan membuat halaman HTML yang akan ditampilkan oleh browser dengan memasukkan data yang diambil dari template HTML.
+
+1. URLs: URL digunakan untuk mengarahkan HTTP request ke tampilan yang sesuai. 
+2. View: View adalah request handler function yang menerima HTTP requests dan mengembalikan HTTP responses. View mengakses data yang diperlukan untuk memenuhi permintaan melalui models dan mendelegasikan respons ke templates.
+3. Models: Models adalah Python objects yang mendefinisikan struktur data aplikasi dan menyediakan mekanisme untuk mengelola, seperti menambah, memodifikasi, menghapus, dan meminta catatan ke dalam database.
+4. Templates: Templates adalah file teks yang mendefinisikan struktur atau tata letak file, seperti halaman HTML, dengan placeholder yang digunakan untuk mewakili konten yang sebenarnya. View dapat membuat halaman HTML menggunakan template HTML dan mengisinya dengan data-data dari models.
+>>>>>>> 577c5eef464748c8cc6a5975bb168505e14a7ff2
 
 ### Sending the request to the right view (urls.py)
 URL mapper disimpan dalam file bernama urls.py. URL mapper (variabel urlpatterns) mendefinisikan daftar pemetaan antara rute (specific URL patterns) dengan fungsi tampilan yang sesuai. Jika HTTP request yang diterima memiliki URL yang cocok, fungsi tampilan yang berkaitan akan dipanggil dan meneruskan permintaan tersebut.
@@ -29,6 +40,7 @@ URL mapper disimpan dalam file bernama urls.py. URL mapper (variabel urlpatterns
 Argumen pertama pada path() adalah rute atau pola yang akan dicocokkan. Argumen kedua adalah fungsi lain yang akan dipanggil ketika polanya cocok. Fungsi yang dipanggil pada argumen kedua ini dapat ditemukan pada file views.py.
 
 ### Handling the request (views.py)
+<<<<<<< HEAD
 Views adalah inti dari web aplikasi, yang menerima HTTP request dan mengembalikan HTTP responses. 
 
 Fungsi show_katalog yang terdapat dalam views.py akan menerima objek HTTP request dalam bentuk parameter (request) dan mengembalikan objek HTTP response.
@@ -37,6 +49,12 @@ Fungsi show_katalog yang terdapat dalam views.py akan menerima objek HTTP reques
 Web aplikasi Django mengelola dan meminta data melalui objek Python yang disebut sebagai model. 
 
 Class CatalogItem diturunkan dari class Model. Dengan demikian, class CatalogItem juga mewarisi semua method dari class Model. Pada class ini, didefinisikan data-data yang dibutuhkan oleh database.
+=======
+Views adalah inti dari web aplikasi, yang menerima HTTP request dan mengembalikan HTTP responses. Fungsi show_katalog yang terdapat dalam views.py akan menerima objek HTTP request dalam bentuk parameter (request) dan mengembalikan objek HTTP response.
+
+### Defining data models (models.py)
+Web aplikasi Django mengelola dan meminta data melalui objek Python yang disebut sebagai model. Class CatalogItem diturunkan dari class Model. Dengan demikian, class CatalogItem juga mewarisi semua method dari class Model. Pada class ini, didefinisikan data-data yang dibutuhkan oleh database.
+>>>>>>> 577c5eef464748c8cc6a5975bb168505e14a7ff2
 
 ### Querying data (views.py)
 Django menyediakan API query sederhana untuk mencari database terkait. Fungsi show_katalog yang terdapat dalam views.py menggunakan fungsi render() untuk membuat HTTP response yang dikirim kembali ke browser. Fungsi render() dapat menggabungkan template HTML (katalog.html) dengan data-data yang akan dimasukkan ke dalam template (context).
@@ -337,10 +355,19 @@ Setelah melakukan tahapan-tahapan sebelumnya, jika kita membuka tab GitHub Actio
 
 6. Membuka tab GitHub Actions dan menjalankan kembali workflow yang gagal (Click commit names -> Re-run jobs -> Re-run failed jobs). 
 
+<<<<<<< HEAD
 Setelah workflow berjalan kembali, status deployment menjadi sukses (terdapat simbol centang hijau pada repositori). Aplikasi dapat diakses melalui https://<nama-aplikasi-heroku>.herokuapp.com/katalog
 
+=======
+Setelah workflow berjalan kembali, status deployment menjadi sukses (terdapat simbol centang hijau pada repositori). Aplikasi dapat diakses melalui https://tugas-2-katalog.herokuapp.com/katalog
+  
+>>>>>>> 577c5eef464748c8cc6a5975bb168505e14a7ff2
 ## Referensi
 
 Breuss, Martin. (2022). Python Virtual Environments: A Primer. Retrieved from https://realpython.com/python-virtual-environments-a-primer/#why-do-you-need-virtual-environments.
 
+<<<<<<< HEAD
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction
+=======
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction
+>>>>>>> 577c5eef464748c8cc6a5975bb168505e14a7ff2

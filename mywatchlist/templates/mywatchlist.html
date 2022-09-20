@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+
+  <h1>Tugas 3 Assignment PBP</h1>
+  <h3>Hello! My name is Caca and this is my korean movies watch list. Happy reading :) </h3>
+
+  <table>
+    <tr>
+      <th>STATUS</th>
+      <th>TITLE</th>
+      <th>RATING</th>
+      <th>RELEASE DATE</th>
+      <th>REVIEW</th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for mywatchlist in list_tontonan %}
+      <tr>
+        <th>{{mywatchlist.watched}}</th>
+        <th>{{mywatchlist.title}}</th>
+        <th>{{mywatchlist.rating}}</th>
+        <th>{{mywatchlist.release_date}}</th>
+        <th>{{mywatchlist.review}}</th>
+      </tr>
+    {% endfor %}
+  </table>
+
+ {% endblock content %}

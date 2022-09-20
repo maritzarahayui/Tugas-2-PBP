@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HEROKU_API_KEY: 78b9d76b-9cf6-4882-b9d8-dd99627063ef
-      HEROKU_APP_NAME: tugas-2-katalog
+      HEROKU_APP_NAME: caca-watchlist
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby 2.7

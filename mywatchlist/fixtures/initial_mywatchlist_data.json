@@ -1,0 +1,167 @@
+[
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 1,
+        "fields": {
+            "watched": "To Do",
+            "title": "Partners for Justice",
+            "rating": "-",
+            "release_date": "2018-5-14",
+            "review": "review belum tersedia"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 2,
+        "fields": {
+            "watched": "Done",
+            "title": "Big Mouth",
+            "rating": "4",
+            "release_date": "2022-7-29",
+            "review": "baru banget kelar nih filmnya pas minggu lalu, epic ending gokill"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 3,
+        "fields": {
+            "watched": "Done",
+            "title": "Law School",
+            "rating": "5",
+            "release_date": "2021-4-14",
+            "review": "ini film bikin nambah dosa sih soalnya semua eps isinya fitnah-memfitnah astagfirullah"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 4,
+        "fields": {
+            "watched": "Done",
+            "title": "Taxi Driver",
+            "rating": "5",
+            "release_date": "2021-4-9",
+            "review": "film initu tentang bales dendam gituu, tapi lewat perantara supir taksi.\n BUT SUPIR TAKSINYA LEE JE-HOON GUYS cakep bgt ril no fek"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 5,
+        "fields": {
+            "watched": "To Do",
+            "title": "Why Her",
+            "rating": "-",
+            "release_date": "2022-6-3",
+            "review": "review belum tersedia"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 6,
+        "fields": {
+            "watched": "Done",
+            "title": "Happiness",
+            "rating": "4",
+            "release_date": "2021-11-5",
+            "review": "film initu tentang para penghuni apartment yang kena virus dan berakhir jadi kaya zombie.\n awalnya 1 orang trus jadi sekampung. gitu ajasi jadi nyeritain gimana cara pemainnya survive di dalam apartment"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 7,
+        "fields": {
+            "watched": "Done",
+            "title": "The Devil Judge",
+            "rating": "5",
+            "release_date": "2021-7-31",
+            "review": "berhubung gua juga suka sama drama semacam law school, wah ini seru bangetsii.\n intinya tuh ada jaksa yang kalo ngasih hukuman tuh ga kira-kira,\n dia bahkan bisa memanipulasi persidangan supaya hukuman akhirnya sesuai sama yang dia mau. SERU BANGET recommended sekali everybody"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 8,
+        "fields": {
+            "watched": "To Do",
+            "title": "Voice",
+            "rating": "-",
+            "release_date": "2011-4-26",
+            "review": "review belum tersedia"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 9,
+        "fields": {
+            "watched": "Done",
+            "title": "Prison Playbook",
+            "rating": "5",
+            "release_date": "2017-11-22",
+            "review": "JADIII initu nyeritain tentang atlet baseball yang masuk penjara gara gara nolongin adeknya dari orang jahat.\n truss di penjara dia ketemu sama berbagai orang KEREN BGTTT ADA JUNG HAE IN LOH"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 10,
+        "fields": {
+            "watched": "Done",
+            "title": "Vagabond",
+            "rating": "5",
+            "release_date": "2019-9-20",
+            "review": "DEMI APAPUN INI SERU MAKSIMAL!!! di dalem ceritanya kaya nyari pelaku utama dari kejahatan yang terjadi tuh siapaa dan bnr bnr muter muter trs kebongkar trnyata banyak pengkhianat gt. TRUS ROMANCE TIPIS TIPIS THAT WAS I LIKEEEE IT omg tpi endingnya gantung banget HUFT"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 11,
+        "fields": {
+            "watched": "Done",
+            "title": "Hometown Cha Cha Cha",
+            "rating": "5",
+            "release_date": "2021-8-28",
+            "review": "WAH INI FILM ANJHWBDKBFWD. gua tuh gasuka drama romance TAPI YANG INI GAPAPA. sepanjang episode dibikin senyum-senyum sendiri, trus jadi ikut ngerasa lagi fall in love tiap soundtrack nya muncul LA LA LA LA LA LA LA ROMANTIC SUNDAAAAY~"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 12,
+        "fields": {
+            "watched": "Done",
+            "title": "Hymn of Death",
+            "rating": "2",
+            "release_date": "2018-11-27",
+            "review": "mungkin kalo yg suka genre begini bakalan blg ini bagus ato gmnn, tp gua sendiri NO karna gua berasa nonton film tenggelamnya kapal van der wijck versi korea lol"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 13,
+        "fields": {
+            "watched": "Done",
+            "title": "Itaewon Class",
+            "rating": "5",
+            "release_date": "2020-1-31",
+            "review": "INI SERU PARAH!!! vibes nya tuh mirip sama start up karena tentang persaingan dalam dunia bisnis gitu, tapi kalo dari gua pribadi si itaewon >>> start up karena bener-bener kerasa feel 'bisnis'nya"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 14,
+        "fields": {
+            "watched": "To Do",
+            "title": "Doctor Lawyers",
+            "rating": "-",
+            "release_date": "2022-6-3",
+            "review": "review belum tersedia"
+        }
+    },
+    {
+        "model": "mywatchlist.MyWatchList",
+        "pk": 15,
+        "fields": {
+            "watched": "Done",
+            "title": "Sky Castle",
+            "rating": "5",
+            "release_date": "2018-11-23",
+            "review": "seru bgtt asli ini film kaya nyeritain ortu-ortu ambis yg pengen anaknya masuk kedokteran. moral message nya menurut gua sih jd lebih ke bikin kita tau kalo ortu akan ngelakuin apapun demi anaknya <3"
+        }
+    }
+]

@@ -13,11 +13,11 @@ HTML adalah singkatan dari Hyper Text Markup Language. HTML digunakan untuk mena
 
 Perbedaan JSON dan XML
 
-
+![Table 1](https://user-images.githubusercontent.com/112602492/191536100-8345a2c8-c99f-4970-9bcc-eab428e40e40.png)
 
 Perbedaan XML dan HTML
 
-
+![Table 1 (1)](https://user-images.githubusercontent.com/112602492/191536189-c9d2e92f-0ef4-453a-82b2-093a0bb4002b.png)
 
 ## Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?
 
@@ -312,15 +312,15 @@ Data delivery adalah proses mengirimkan data dari satu stack ke stack lainnya da
 
 HTML
 
-
+![Screenshot (1924)](https://user-images.githubusercontent.com/112602492/191537996-f1e8159c-b99e-44af-b62b-d488e43e7126.png)
 
 XML
 
-
+![Screenshot (1922)](https://user-images.githubusercontent.com/112602492/191537260-7236d414-6efd-479a-83c2-24c2edd1e0ff.png)
 
 JSON
 
-
+![Screenshot (1923)](https://user-images.githubusercontent.com/112602492/191537195-237030ff-26ec-4dd5-94ac-076aff4c8d74.png)
 
 ## Menambahkan unit test pada tests.py untuk menguji bahwa tiga URL di poin 6 dapat mengembalikan respon HTTP 200 OK
 

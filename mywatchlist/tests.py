@@ -8,7 +8,7 @@ class MyWatchListTest(TestCase):
         self.assertEqual(response.status_code,200)
 
     def test_mywatchlist(self):
-        response = Client().get('/mywatchlist/xtml/')
+        response = Client().get('/mywatchlist/xml/')
         self.assertEqual(response.status_code,200)
 
     def test_mywatchlist(self):

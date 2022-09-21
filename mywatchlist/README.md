@@ -1,5 +1,7 @@
 # TUGAS 3 PBP
 
+Created by: Maritza Rahayu Indriyani - 2106751474
+
 ## Link menuju aplikasi Heroku
 
 https://caca-watchlist.herokuapp.com/mywatchlist/

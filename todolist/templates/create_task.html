@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class = "login">
+    <h3>Add your new task!</h3>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div>
+            <label for="judul">Task: </label>
+            <input id="judul" type="text" name="title" placeholder="write your task" required>
+        </div>
+
+        <p></p>
+        <div>
+            <label for="deskripsi">Description: </label>
+            <input id="deskripsi" type="text" name="description" placeholder="describe your task" required>
+        </div>
+
+        <p></p>
+        <input class="btn tambah_task" type="submit" value="Tambah Task Baru">
+    </form>
+</div>
+{% endblock content %}

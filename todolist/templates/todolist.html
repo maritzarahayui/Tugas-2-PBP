@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Tugas 4 Assignment PBP</h1>
+<h2>{{user}}'s Tasks</h2>
+
+<table border=1 style="background-color:#FDD4B8;">
+    <tr style="background-color:#FFFFFF";>
+        <th>Tanggal</th>
+        <th>Judul</th>
+        <th>Deskripsi</th>
+        <th>Status</th>
+        <th>Hapus Task</th>
+        <th>Update Task</th>
+    </tr>
+    {% comment %} Add the data below this line {% endcomment %}
+    {% for task in list_task %}
+        <tr>
+            <th>{{task.date}}</th>
+            <th>{{task.title}}</th>
+            <th>{{task.description}}</th>
+            <th>{{task.is_finished}}</th>
+            <th><button class="btn-ans"><a href="{% url 'todolist:delete_task' task.id %}">Delete</a></button></th>
+            <th><button class="btn update"><a href="{% url 'todolist:update_task' task.id %}">Update</a></button></th>
+        </tr>
+    {% endfor %}
+</table>
+
+<div class="actions">
+    <button><a href="{% url 'todolist:create_task' %}">Tambah Task Baru</a></button>
+    <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+</div>
+
+{% endblock content %}

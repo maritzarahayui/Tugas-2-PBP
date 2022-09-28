@@ -62,7 +62,7 @@ Saat kita menulis {{ form }} dalam sebuah template, itu sebenarnya sedang mengak
 
 ## Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML.
 
-
+![submission](https://user-images.githubusercontent.com/112602492/192833500-34ae5b63-4b81-41f5-aceb-41357b3e3db9.PNG)
 
 1. Pengguna mengakses http://host/path
 2. Browser men-generate HTTP request pada http://host/path
@@ -345,8 +345,9 @@ Saat kita menulis {{ form }} dalam sebuah template, itu sebenarnya sedang mengak
 
 9. Membuat dua akun pengguna dan tiga dummy data menggunakan model Task pada akun masing-masing di situs web Heroku.
 
+![task1](https://user-images.githubusercontent.com/112602492/192833657-2363777b-54c9-40b6-98f5-9b03883cc0d3.PNG)
 
-
+![task2](https://user-images.githubusercontent.com/112602492/192833726-873ab9be-dacb-4fc9-a562-dc808badedb3.PNG)
 
 ## Referensi
 

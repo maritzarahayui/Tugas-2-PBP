@@ -2,34 +2,58 @@
 
 {% block content %}
 
-<h1>Tugas 4 Assignment PBP</h1>
-<h2>{{user}}'s Tasks</h2>
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <style type="text/css">
+                .navbar {
+                    background: #5f2c82; 
+                    background: -webkit-linear-gradient(to right, #49a09d, #5f2c82); 
+                    background: linear-gradient(to right, #49a09d, #5f2c82);  
+                }
 
-<table border=1 style="background-color:#FDD4B8;">
-    <tr style="background-color:#FFFFFF";>
-        <th>Tanggal</th>
-        <th>Judul</th>
-        <th>Deskripsi</th>
-        <th>Status</th>
-        <th>Hapus Task</th>
-        <th>Update Task</th>
-    </tr>
-    {% comment %} Add the data below this line {% endcomment %}
+                .color-me{
+                    color:whitesmoke;
+                }
+
+            </style>
+            <a class="navbar-brand mb-0 h1">
+                <img src="https://img.icons8.com/external-soft-fill-juicy-fish/2x/external-task-business-management-soft-fill-soft-fill-juicy-fish-2.png" height="28" alt="" />
+                <span class="color-me">{{user}}'s Tasks</span>
+            </a>
+        </div>
+        <button type="button" class="btn btn-light btn-rounded"><a href="{% url 'todolist:logout' %}">Logout</a></button>
+    </div>
+</nav>
+
+<br>
+ 
+
+<div class="row row-cols-1 row-cols-md-4 g-0 text-center">
     {% for task in list_task %}
-        <tr>
-            <th>{{task.date}}</th>
-            <th>{{task.title}}</th>
-            <th>{{task.description}}</th>
-            <th>{{task.is_finished}}</th>
-            <th><button class="btn-ans"><a href="{% url 'todolist:delete_task' task.id %}">Delete</a></button></th>
-            <th><button class="btn update"><a href="{% url 'todolist:update_task' task.id %}">Update</a></button></th>
-        </tr>
+    <div class="col text-center">
+            <div class="card text-center" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{task.title}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{task.date}}</h6>
+                    <h6 class="card-subtitle mb-2">Is Finished? {{task.is_finished}}</h6>
+                    <p class="card-text">
+                        <th style="text-align:center" class="font-weight-normal">{{task.description}}</th>
+                    </p>
+                    <a href="{% url 'todolist:update_task' task.id %}" class="btn btn-warning">Update Status</a>
+                    <a href="{% url 'todolist:delete_task' task.id %}" class="btn btn-danger">Delete Task</a>
+                </div>
+            </div>
+    </div>
     {% endfor %}
-</table>
+</div>
 
-<div class="actions">
-    <button><a href="{% url 'todolist:create_task' %}">Tambah Task Baru</a></button>
-    <button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+<br>
+
+<div class="text-center">
+    <button class="btn btn-dark" aria-label="Left Align">
+        <img src="https://img.icons8.com/cotton/2x/plus--v3.png" width="24px" height="24px"/><a href="{% url 'todolist:create_task' %}" class="btn btn-dark"> New Task</a>
+    </button>
 </div>
 
 {% endblock content %}

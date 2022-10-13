@@ -50,10 +50,164 @@
 
 <br>
 
+<!-- href="{% url 'todolist:create_task' %}" -->
+
+<!-- Button trigger modal -->
 <div class="text-center">
-    <button class="btn btn-dark" aria-label="Left Align">
-        <img src="https://img.icons8.com/cotton/2x/plus--v3.png" width="24px" height="24px"/><a href="{% url 'todolist:create_task' %}" class="btn btn-dark"> New Task</a>
-    </button>
+    <a style="width: 15rem;" class="btn login_btn btn btn-dark form-control" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Add Task</a>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add your new task!</h5>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            
+            <div class="modal-body">
+                <form method="POST" action="">
+                    {% csrf_token %}
+    
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Task</label>
+                            <input id="judul" type="text" name="title" placeholder="write your task" required class="form-control form-control-lg rounded-8">
+                        </div>
+                
+                        <p></p>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input id="deskripsi" type="text" name="description" placeholder="describe your task" required class="form-control form-control-lg rounded-8">
+                        </div>
+                
+                        <!-- <p></p>
+                        <input class="btn btn-primary" type="submit" value="Add Task"> -->
+                    </div>
+    
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="addtaskbutton" data-bs-dismiss="modal">Add Task</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    async function getWishlist() {
+        return fetch("{% url 'todolist:get_todolist_json' %}")
+            .then((res) => res.json())
+            .then(todolist => {
+                return todolist;
+            })
+            .catch(error => {
+                console.error("ERROR:", error);
+            })
+    }
+
+    async function refreshTodolist() {
+        document.getElementById("task").innerHTML = ""
+        const todolist= await getTodolist()
+        let htmlString = ``
+
+        todolist.forEach((item) => {
+            let is_finished_content = item.fields.is_finished? 'Status : Selesai' : 'Status : Belum Selesai';
+            htmlString += `<div class="col">
+                    <div class="card text-center" style="width: 20rem;">
+                    <div class="card-body">
+                        <h2 class="card-header"> ${item.fields.title} </h2>
+                        <p class="card-text">Created on : ${item.fields.date}</p>
+                        <p class="card-text">Description : ${item.fields.description}</p>
+                        <p class="card-text"> ${is_finished_content} </p>
+                        <button><a class="btn btn-primary" href="update-status/${item.pk}">Update Status</a></button>
+                        <button><a class="btn btn-primary" href="delete-status/${item.pk}">Delete Status</a></button>
+                        <br>
+                        </div>
+                    </div>
+                </div>` 
+        })
+        
+        document.getElementById("task").innerHTML = htmlString
+    }
+
+    function addTodolist() {
+        fetch("{% url 'todolist:add_todolist_item' %}", {
+            method: "POST",
+            body: new FormData(document.querySelector('#form'))
+        }).then(refreshTodolist)
+        return false
+    }
+
+    document.getElementById("addtaskbutton").onclick = addTodolist
+    refreshTodolist()
+
+    // $(document).ready(function(){
+    //     $('.add-todolist-item').click( function(){
+    //         let title = $('.title').val();
+    //         let description = $('.description').val();
+    //         let CSRFtoken = $('input[name="csrfmiddlewaretoken"]').val();
+
+    //         $.post('/todolist/add/', {
+    //             title: title,
+    //             description: description,
+    //             csrfmiddlewaretoken: CSRFtoken
+    //         }, function(){
+    //             async function getTodolist() {
+    //                 return fetch("{% url 'todolist:get_todolist_json' %}")
+    //                     .then((res) => res.json())
+    //                     .then(todolist => {
+    //                         return todolist;
+    //                     })
+    //                     .catch(error => {
+    //                         console.error("ERROR:", error);
+    //                     })
+    //             }
+
+    //             async function refreshTodolist(){
+    //                 document.getElementById("task").innerHTML = ""
+    //                 const todolist = await getTodolist()
+    //                 let htmlString = ``
+
+    //                 todolist.forEach((item) => {
+    //                     let is_finished_content = item.fields.is_finished? 'Status : Selesai' : 'Status : Belum Selesai';
+    //                     htmlString += `<div class="col">
+    //                             <div class="card text-center" style="width: 20rem;">
+    //                             <div class="card-body">
+    //                                 <h2 class="card-header"> ${item.fields.title} </h2>
+    //                                 <p class="card-text">Created on : ${item.fields.date}</p>
+    //                                 <p class="card-text">Description : ${item.fields.description}</p>
+    //                                 <p class="card-text"> ${is_finished_content} </p>
+    //                                 <button><a class="btn btn-primary" href="update-status/${item.pk}">Update Status</a></button>
+    //                                 <button><a class="btn btn-primary" href="delete-status/${item.pk}">Delete Status</a></button>
+    //                                 <br>
+    //                                 </div>
+    //                             </div>
+    //                         </div>`
+    //                 })
+
+    //                 document.getElementById("task").innerHTML = htmlString
+    //             }
+
+    //             async function addTodolist() {
+    //                 fetch("{% url 'todolist:add_todolist_item' %}", {
+    //                     method: "POST",
+    //                     body: new FormData(document.querySelector('#form'))
+    //                 }).then(refreshTodolist)
+    //                 return false
+    //             }
+
+    //             document.getElementById("button").onclick = addTodolist
+    //             refreshTodolist()
+    //         })
+    //     })
+    // })
+
+</script>
 
 {% endblock content %}

@@ -5,23 +5,26 @@
     <div class="card p-3 mb-2 bg-ligth text-dark shadow-lg p-3 mb-5 bg-body rounded position-absolute top-50 start-50 translate-middle" style="width: 25rem;">
         <h3 class="text-center">Add your new task!</h3>
 
-
         <div class="card-body">
             <form method="POST" action="">
                 {% csrf_token %}
-                <div class="form-group">
-                    <label>Task</label>
-                    <input id="judul" type="text" name="title" placeholder="write your task" required class="form-control form-control-lg rounded-8">
+    
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Task</label>
+                        <input id="judul" type="text" name="title" placeholder="write your task" required class="form-control form-control-lg rounded-8">
+                    </div>
+            
+                    <p></p>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <input id="deskripsi" type="text" name="description" placeholder="describe your task" required class="form-control form-control-lg rounded-8">
+                    </div>
+            
+                    <p></p>
+                    <input class="btn btn-primary" type="submit" value="Tambah Task Baru">
                 </div>
-        
-                <p></p>
-                <div class="form-group">
-                    <label>Description</label>
-                    <input id="deskripsi" type="text" name="description" placeholder="describe your task" required class="form-control form-control-lg rounded-8">
-                </div>
-        
-                <p></p>
-                <input class="btn btn-primary" type="submit" value="Tambah Task Baru">
+    
             </form>
         </div>
     </div>

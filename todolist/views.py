@@ -9,6 +9,8 @@ from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from datetime import datetime
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseNotFound
+from django.core import serializers
 
 # halaman todolist hanya dapat diakses oleh pengguna yang sudah login (terautentikasi).
 @login_required(login_url='/todolist/login/')
@@ -74,3 +76,19 @@ def update_task(request,i):
     z.is_finished = not z.is_finished
     z.save()
     return HttpResponseRedirect('/todolist/')
+
+def get_todolist_json(request):
+    my_task = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize('json', my_task))
+
+def add_todolist_item(request):
+    if request.method == 'POST':
+        judul = request.POST.get("title")
+        deskripsi = request.POST.get("description")
+
+        new_task = Task(user=request.user, title=judul, description=deskripsi, date=datetime.now())
+        new_task.save()
+
+        return HttpResponse(b"CREATED", status=201)
+
+    return HttpResponseNotFound()

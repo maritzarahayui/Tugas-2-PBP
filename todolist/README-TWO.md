@@ -1,14 +1,14 @@
 # TUGAS 6 PBP
 
 ## Jelaskan perbedaan antara asynchronous programming dengan synchronous programming
-
+![syn](https://user-images.githubusercontent.com/112602492/195493440-305424c3-bc54-4229-8dd5-da210d5cc45f.PNG)
 
 - Asynchronous programming adalah multi-thread, yang berarti program dapat berjalan secara paralel. Sedangkan synchronous programming adalah single-thread, yang berarti hanya dapat menjalankan satu program dalam satu waktu.
 - Asynchronous programming bersifat non-blocking, yang berarti dapat mengirim banyak permintaan ke server. Sedangkan synchronous programming bersifat blocking, yang berarti hanya akan mengirim satu permintaan ke server dalam satu waktu dan menunggu permintaan tersebut dijawab oleh server.
 - Asynchronous programming meningkatkan throughput karena beberapa program dapat berjalan secara bersamaan. Sedangkan synchronous programming lebih lambat.
 
 ## Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma Event-Driven Programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.
-
+![eventdriven](https://user-images.githubusercontent.com/112602492/195493339-c0ca5b09-62eb-4a98-9eed-b89cf739d65f.PNG)
 
 Program yang menerapkan JavaScript merespon tindakan pengguna dengan sesuatu yang disebut "events". Event-Driven Programming sendiri berarti menulis program yang didorong oleh peristiwa pengguna.
 Paradigma Event-Driven Programming:
